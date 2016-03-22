@@ -3,7 +3,7 @@ $pink: #DB6196;
 $yellow: #DAE06A;
 $green: #6CBD9C;
 $blue: #83C3D1;
-$hover: #337ab7;
+$darkblue: #337ab7;
 
 .body {
   position: relative;
@@ -22,7 +22,7 @@ $hover: #337ab7;
 
 .nav-pills {
   margin-bottom: 0px;
-  background-color: $blue;
+  background-color: $darkblue;
   color: white;
 
   li{
@@ -33,28 +33,40 @@ $hover: #337ab7;
       font-size: 1.5em;
       border-radius: 0;
 
-      &:hover {
+      &:hover, &:focus {
         transition: all .2s ease-in;
-        background-color: $hover;
+        background-color: $pink;
+      }
+    }
+
+    &.active {
+      a {
+        background-color: $pink;
       }
     }
   }
 }
 
-
 .jumbotron {
+  background-size: cover;
   background-color: $green;
-  min-height: 300px;
+  min-height: 800px;
   margin-bottom: 0;
 
   h1 {
     color: $red;
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 175px;
     font-family: 'Amatic SC', cursive;
     font-weight: 700;
     font-size: 7em;
   }
+
+  .welcome-content {
+    margin-bottom: 200px;
+  }
+
+
 }
 
 #about {
@@ -91,7 +103,11 @@ $hover: #337ab7;
 }
 
 .footer {
-  padding: 50px;
   padding-bottom: 200px;
   font-size: .75em;
+}
+
+.social {
+  width: 75px;
+  margin: 50px;
 }
