@@ -5,6 +5,11 @@ $green: #6CBD9C;
 $blue: #83C3D1;
 $darkblue: #337ab7;
 
+@font-face {
+  font-family: "AHDN";
+  src: url("/stylesheets/fonts/AHDN.ttf")
+}
+
 .body {
   position: relative;
 }
@@ -22,51 +27,39 @@ $darkblue: #337ab7;
 
 .nav-pills {
   margin-bottom: 0px;
-  background-color: $darkblue;
+  background-color: $green;
   color: white;
 
   li{
 
     a {
       color: inherit;
-      font-family: 'Amatic SC', cursive;
+
       font-size: 1.5em;
       border-radius: 0;
 
       &:hover, &:focus {
         transition: all .2s ease-in;
-        background-color: $pink;
+        background-color: $red;
       }
     }
 
     &.active {
+
       a {
-        background-color: $pink;
+        background-color: $red;
+
+        &:hover, &:focus {
+          background-color: $red;
+        }
       }
     }
   }
 }
 
 .jumbotron {
-  background-size: cover;
-  background-color: $green;
-  min-height: 800px;
-  margin-bottom: 0;
-
-  h1 {
-    color: $red;
-    margin-top: 0;
-    margin-bottom: 175px;
-    font-family: 'Amatic SC', cursive;
-    font-weight: 700;
-    font-size: 7em;
-  }
-
-  .welcome-content {
-    margin-bottom: 200px;
-  }
-
-
+  background-color: white;
+  padding: 10px;
 }
 
 #about {
@@ -85,21 +78,38 @@ $darkblue: #337ab7;
   background-color: $green;
 }
 
+#sponsors {
+  background-color: white;
+}
+
 .footer {
-  background-color: $red;
-  color: white;
+  background-color: $blue;
 }
 
 .header {
-  font-family: 'Amatic SC', cursive;
-  font-weight: bold;
   color: white;
 }
 
 .section {
   p {
+    font-size: 1.25em;
     padding-bottom: 20px;
   }
+}
+
+.section-icon {
+  margin-top: 50px;
+  width: 200px;
+  height: auto;
+}
+
+.vendor-apps {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact {
+  list-style: none;
 }
 
 .footer {
@@ -110,4 +120,8 @@ $darkblue: #337ab7;
 .social {
   width: 75px;
   margin: 50px;
+}
+
+.sponsor {
+  padding: 15%;
 }

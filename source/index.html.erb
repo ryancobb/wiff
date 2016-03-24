@@ -4,29 +4,24 @@ title: Welcome
 
 <div class="jumbotron">
   <div class="container">
-    <div class="row text-center">
-      <h1 class=>Wasatch International Food Festival</h1>
-    </div>
     <div class="row text-center welcome-content">
-      <h2>Welcome content goes here.Welcome content goes here.Welcome content goes here.Welcome content goes here.Welcome content goes here.Welcome content goes here.Welcome content goes here.Welcome content goes here.Welcome content goes here.
-        </h2>
+      <div class="col-sm-12">
+          <%= image_tag "/images/wiffposter.png", class: "img-rounded img-responsive" %>
+      </div>
     </div>
       <nav id="navspy">
-        <ul class="nav nav-pills nav-justified" data-spy="affix" data-offset-top="650">
+        <ul class="nav nav-pills nav-justified" data-spy="affix" data-offset-top="935">
           <li>
             <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#2016info">2016 Info</a>
           </li>
           <li>
             <a href="#tickets">Tickets</a>
           </li>
           <li>
-            <a href="#map">Map</a>
+            <a href="#vendors">Vendors</a>
           </li>
           <li>
-            <a href="#vendors">Vendors</a>
+            <a href="#map">Map</a>
           </li>
           <li>
             <a href="#sponsors">Sponsors</a>
@@ -40,37 +35,10 @@ title: Welcome
   </div>
 </div>
 
-<div class="section" id="about">
-  <div class="container">
-      <h1 class="header">About</h1>
-      <p>
-        <%= lorem.paragraphs 20 %>
-      </p>
-  </div>
-</div>
-
-<div class="section" id="tickets">
-  <div class="container">
-    <h1 class="header">Tickets</h1>
-    <p>
-      <%= lorem.paragraphs 20 %>
-    </p>
-  </div>
-</div>
-
-<div class="section" id="map">
-  <div class="container">
-    <h1 class="header">Map</h1>
-    <p>
-      <%= lorem.paragraphs 20 %>
-    </p>
-  </div>
-</div>
-<div class="section" id="vendors">
-  <div class="container">
-    <h1 class="header">Vendors</h1>
-    <p>
-      <%= lorem.paragraphs 20 %>
-    </p>
-  </div>
-</div>
+<%= partial "layouts/about" %>
+<%= partial "layouts/tickets" %>
+<%= partial "layouts/vendors" %>
+<%= partial "layouts/map" %>
+<%= partial "layouts/sponsors" %>
+<%= partial "layouts/getinvolved" %>
+<%= partial "layouts/contact" %>
