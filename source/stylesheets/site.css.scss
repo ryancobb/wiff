@@ -5,15 +5,24 @@ $green: #6CBD9C;
 $blue: #83C3D1;
 $darkblue: #337ab7;
 
+$bg-blue: #20415F;
+$bg-pink: #3E0D22;
+$bg-yellow: #4C4E1F;
+$bg-green: #192F26;
+
 @font-face {
   font-family: "AHDN";
   src: url("/stylesheets/fonts/AHDN.ttf")
 }
 
-.body {
+body {
   position: relative;
+  color: white;
 }
 
+h1 {
+  font-size: 48px;
+}
 
 .affix {
     top: 0;
@@ -35,7 +44,6 @@ $darkblue: #337ab7;
 .nav-pills {
   margin-bottom: 0px;
   background-color: $green;
-  color: white;
 
   li{
 
@@ -70,31 +78,44 @@ $darkblue: #337ab7;
 }
 
 #about {
-  background-color: $red;
+  background-color: $bg-pink;
+  background-image: url("/images/backgrounds/mountains.png");
+  background-size: cover;
+
 }
 
 #tickets {
-  background-color: $blue;
-}
-
-#map {
-  background-color: $yellow;
+  background-color: $bg-blue;
+  background-image: url("/images/backgrounds/food2.png");
+  background-size: cover;
 }
 
 #vendors {
-  background-color: $green;
+  background-color: $bg-green;
+  background-image: url("/images/backgrounds/clouds.png");
+  background-size: cover;
 }
 
 #sponsors {
-  background-color: white;
+  color: black;
 }
+
+#getinvolved {
+  background-color: $bg-blue;
+  background-image: url("/images/backgrounds/volunteer.png");
+  background-size: cover;
+}
+
+#contact {
+  background-color: $bg-pink;
+  background-image: url("/images/backgrounds/contact.png");
+  background-size: cover;
+}
+
+
 
 .footer {
-  background-color: $blue;
-}
-
-.header {
-  color: white;
+  background-color: $bg-blue;
 }
 
 .section {
@@ -102,12 +123,20 @@ $darkblue: #337ab7;
     font-size: 1.25em;
     padding-bottom: 20px;
   }
+
+  a {
+    color: $red;
+  }
+
+  .row {
+    padding: 50px;
+  }
 }
 
 .section-icon {
-  margin-top: 50px;
   width: 200px;
   height: auto;
+  opacity: .75;
 }
 
 .vendor-apps {
@@ -131,4 +160,22 @@ $darkblue: #337ab7;
 
 .sponsor {
   padding: 15%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+}
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
